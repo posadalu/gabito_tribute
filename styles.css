@@ -9,10 +9,14 @@
     background-size: 100% 100%;
 } 
 
+
 .intro{
-    padding: 40px 60px 40px 60px;
-    
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 10px;
+    padding: 40px 60px 40px 60px;    
 }
+
 h1{
     font-family: 'Merienda', cursive;
     color:whitesmoke;
@@ -22,6 +26,81 @@ h1{
     -webkit-text-stroke-color:black;
 }
 
-#who:hover, #style:hover, #politics:hover, #story:hover {
+.button {
+    font-size: 32px;
+    font-family: 'Merienda', cursive;
+    background-color: transparent;
+    border: none;
     cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+.menu{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 0px;
+    padding-left: 50px;
+}
+
+.modal {
+    position: fixed;
+    transition: 200ms ease-in-out;
+    top: 30%;
+    left: 50%;
+    transform: translate(20%, 20%) scale(0);
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color:#fddf5c;
+    z-index: 10;
+    color: black;
+    font-size: small;
+    width: 500px;
+}
+.modal.active{
+    transform: translate(20%, 20%) scale(1);
+
+}
+
+.modal_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding: 15px 10px;
+}
+.modal_header h3{
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.modal_header button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 1.5rem;
+}
+
+.modal p {
+    padding: 15px 10px;
+    font-size: 1.1rem;
+}
+
+#overlay {
+    position: fixed;
+    transition: 200ms ease-in-out;
+    opacity: 0;
+    top:0; 
+    bottom:0; 
+    right:0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+
+}
+
+#overlay.active{
+    pointer-events: all;
+    opacity: 1;
 }

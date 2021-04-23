@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="app.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Merienda&family=Montserrat+Alternates:ital,wght@1,200&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
@@ -12,10 +13,47 @@
     <!--Hero section-->
     <div class="cover_img">
         <div class="intro">
-            <h1> Gabriel 'Gabito' Garcia Marquez <span id="who"> 👨🏽‍🦳</span><span id="style"> ✨</span><span id="politics"> ⚒</span><span id="story"> 🥊</span></h1>
+            <h1> Gabriel 'Gabito' Garcia Marquez</h1>
+            <div class="menu">
+        <!--Beginning of button with pop up 1-->
+                <button data-modal-target="#modal" class="button"> 👨🏽‍🦳 </button>
+                <div class="modal">
+                    <div class="modal_header">
+                        <h3>Who</h3>
+                        <button data-button-close class="close">&times;</button>
+                    </div>
+                    <p>He was born in a small town in Colombia. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est expedita in quod rerum, commodi ad deleniti voluptates fugiat voluptate velit obcaecati! Id cum aliquid quam quos totam magni. Nam, ex.</p>
+                </div>
+        <!--End of button with pop up 1-->
+                <button data-modal-target="#modal1" class="button"> ✨</button>
+                <div class="modal" id="modal1">
+                    <div class="modal_header">
+                        <h3>Style</h3>
+                        <button  data-button-close class="close">&times;</button>
+                    </div>
+                    <p>He is the father of Magic Realism. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus beatae laborum cumque tempora commodi necessitatibus eos id ex iure alias repellat, minima magnam nam, fuga aliquid? Sed cumque sapiente quos.</p>
+                </div>
+                <button data-modal-target="#modal2" class="button"> ⚒</button>
+                <div class="modal" id="modal2">
+                    <div class="modal">
+                        <h3>Politics</h3>
+                        <button  data-button-close class="close">&times;</button>
+                    </div>
+                    <p>His grandfather was a liberal milary colonel. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque a corrupti esse totam ipsa ut facilis, inventore assumenda magnam optio dolorem similique velit, eum tempore maiores? Rerum alias dolore blanditiis!</p>
+                </div>
+                <button data-modal-target="#modal3" class="button"> 🥊</button>
+                <div class="modal" id="modal3">
+                    <div class="modal_header">
+                        <h3>Stories</h3>
+                        <button  data-button-close class="close">&times;</button>
+                    </div>
+                    <p>Marco Varias LLosa punched him in the face. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, in tenetur incidunt qui harum consequuntur id architecto accusantium totam, accusamus dolore aliquid. Ab quisquam iusto maxime, assumenda veniam reprehenderit laboriosam!</p>
+                </div>
+            </div>
+                
         </div>
-        <img src="cover.png"  alt="pic of Gabriel Garcia Marquez face"> 
+        <img class="him" src="cover.png"  alt="pic of Gabriel Garcia Marquez face"> 
     </div>
-    
+    <div id="overlay"></div>
 </body>
 </html>
