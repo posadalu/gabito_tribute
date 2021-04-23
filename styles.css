@@ -10,11 +10,18 @@
 } 
 
 .intro{
-    padding: 20px 60px 20px 60px;
-    background-color: black;
-    color:whitesmoke;
+    padding: 40px 60px 40px 60px;
+    
 }
 h1{
     font-family: 'Merienda', cursive;
-    font-size: 70px;
+    color:whitesmoke;
+    font-size: 45px;
+    text-align: left;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color:black;
+}
+
+#who:hover, #style:hover, #politics:hover, #story:hover {
+    cursor: pointer;
 }
